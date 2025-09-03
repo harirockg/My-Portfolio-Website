@@ -8,10 +8,20 @@
     scroll-behavior: smooth;
 }
 
+
+
+
+
 /*global variable*/
 :root{
-    --bgorange:#e84949;
+    --bgOrange:#e84949;
 }
+
+/*for black in background*/
+.body{
+    background-color: black;
+}
+
 
 #wrapper{
     height: 100vh;
@@ -115,7 +125,7 @@ a{
 .faded-text{
     user-select: none;
     font-size: 7em;
-    color: rgb(35, 33, 33);
+    color: rgb(231, 231, 231);/*go to line 366 and match the same as ok*/
 
     bottom: -16%;
     left: 8%;
@@ -187,7 +197,7 @@ a{
 
 .btn-pink:hover::before{
     transform: scaleX(1);
-    border: solid 3px var(--bgorange);
+    border: solid 3px var(--bgOrange);
     color: black;
 
 }
@@ -355,8 +365,272 @@ a{
 
 }
 
+.project-section{
+    background-color: rgb(231,231,231);/*go to line 125 and match the same as ok*/
+    margin-top:4rem;
+  }
 
-.body{
-    background-color: black;
+.page-header{
+    color:var(--bgOrange);
+    font-size:90px;
+    text-align:center;
+    padding-top:30px;
+}
+
+.project-container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 0;
+
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+}
+
+.project-card{
+    width:90%;
+    height:550px;
+    background-image: url(./images/projects/Project1.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    position:relative;
+    box-shadow:0px 0px 40px #1f1f1f;
+}
+
+.project-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #1f1f1f9a;
+    z-index:0;
+    /* transform: scaleX(1); */
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform:scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index:1;
+}
+
+.project-card:hover::before{
+    transform:scaleX(1);
+}
+
+.project-number{
+    position:absolute;
+    font-size:200px;
+    font-weight:600;
+    color:white;
+    z-index:10;
+    /* display:none; */
+    opacity: 0;
+}
+
+
+/*yhi kuch add hoga*/
+.project-card:hover .project-number{
+    /* display:block; */
+    opacity: 1;
+  }
+
+.project-number-right{
+    right:-40px;
+    top:-45px;
+  }
+
+.project-number-left{
+    left:-40px;
+    top:-45px;
+}
+
+.project-content{
+    position:absolute;/*make it relative*/
+    display:flex;
+    flex-direction:column;
+    color:white;
+    padding:2em;
+    bottom:20%;
+    z-index:5;
+    gap:1em;
+    transition:all 0.4s;
+}
+
+.project-content-left{ 
+    left:10%;
+  }
+
+.project-content-right{ 
+    right:10%;
+}
+
+.project-skills-container{
+    width:60%;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  
+}
+
+.project-skill{
+    width:40px;
+}
+
+.project-heading{
+    font-size:50px;
+    font-weight: bold;
+    line-height:3rem;
+}
+
+.project-subHeading{
+    width:70%;
+    font-size:16px;
+    font-style: italic;
+}
+
+.btn-grp{
+    display:flex;
+    gap:0.9rem;
+    align-items:center;
+}
+
+.btn-project:hover{
+    border:none;
+}
+
+.icon{
+    cursor:pointer;
+    color:white;
+    font-size:35px;
+    transition:all 0.4s;
+}
+
+.icon:hover{
+    color:var(--bgOrange);
+}
+
+.project-card:hover .project-content{
+    transform:scale(1.1);
+}
+
+/*background project images*/
+#project1{
+    background-image: url(./images/projects/Project1.png);
+}
+
+#project2{
+    margin-left:120px;
+    background-image: url(./images/projects/Project2.png);
+}
+
+#project3{
+    background-image: url(./images/projects/Project3.png);
+}
+
+#project4{
+    margin-left:120px;
+    background-image: url(./images/projects/Project4.png);
+}
+
+/*yha abhi code baki hai*/
+
+
+
+
+
+
+
+.skills-container{
+    position:relative;
+    display:flex;
+    padding:5rem;
+    margin:10rem auto;
+    gap:30px;
+  }
+
+.skill-container-left{
+  width:50%;
+  display:flex;
+  flex-direction:column;
+}
+
+.skill-container-right{
+  display:flex;
+  flex-wrap:wrap;
+  width:50%;
+  position:relative;
+  gap:2rem;
+  justify-content: center;
+}
+
+.skill-fade-text{
+  position:absolute;
+  font-size:15em;
+  font-style:bold;
+  color:rgb(231,231,231);/*line 125 aur 366 ke jaise karna hai ok*/
+  bottom:-34.5%;
+  right:-25%;
+  user-select:none;
+  overflow-y:hidden;
+}
+
+.blob-style{
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:-5;
+  transform:translate(-50%, -50%);
+  animation: blobAnimate 3s linear infinite;
+} 
+
+@keyframes blobAnimate {
+  50%{
+    top:54%;
+    left:46%;
+  }
+}
+
+.skills-logo{
+  width:115px;
+  transition:all 0.5s;
+}
+
+
+.skills-logo:hover{
+  transform:scale(1.2);
+}
+
+.skill-heading{
+  font-size:50px;
+  font-style: bold;
+  color: var(--bgOrange);
+  line-height: 50px;
+}
+
+.caps{
+  font-size:90px;
+}
+
+
+
+.skill-subHeading{
+  color: rgb(206, 203, 203);
+  margin-top: 1rem;
+  width:85%;
+  text-align: justify;
+}
+
+.skill-subHeading p{
+  margin:15px 0;
 }
 
