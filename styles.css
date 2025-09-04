@@ -9,9 +9,6 @@
 }
 
 
-
-
-
 /*global variable*/
 :root{
     --bgOrange:#e84949;
@@ -27,7 +24,7 @@
     height: 100vh;
     overflow-y: auto;
     
-    /*overflow-x: hidden;*/ /*isse x direction me scroll nhi hoga*/
+    overflow-x: hidden; /*isse x direction me scroll nhi hoga*/
 }
 
 .container{
@@ -36,20 +33,46 @@
 
 }
 
+.navcontainer{
+    width: 100%;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding-top: 1rem;
+    /* box-shadow: #4e45d5; */
+
+    /*for shadow  at nav bar*/
+    background: #111;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.3);
+    position: relative;
+    z-index:10;
     
 }
+
+/* .line{
+    
+    border: none;
+    height: 1px;
+    background-color: #9C27B0;
+} */
+
+/* .shadow-line{
+    height: 2px;
+    background: transparent;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    margin:20px 0;
+} */
 
 .logo{
     width: 50px;
     
     position: relative;
-    left: -11%;
+    left: 35%;
 }
 
 .logo-container{
@@ -73,7 +96,7 @@
     -webkit-text-fill-color: transparent;
 
     position: relative;
-    left: -11%;
+    left: 35%;
 }
 
 .nav-items{
@@ -81,7 +104,10 @@
     gap: 2rem;
     padding: 0 4em; /*may be rem/em */
     /* color: blue; */
+    position: relative;
+    right: 10%;
 }
+
 
 .nav-items div{
     font-size: 20px;
@@ -124,10 +150,10 @@ a{
 
 .faded-text{
     user-select: none;
-    font-size: 7em;
-    color: rgb(231, 231, 231);/*go to line 366 and match the same as ok*/
+    font-size: 5em;
+    color: rgb(214, 212, 212);/*go to line 366 and match the same as ok*/
 
-    bottom: -16%;
+    bottom: -16.5%;
     left: 8%;
     font-weight: bold;
     transition: all 3s;
@@ -366,7 +392,7 @@ a{
 }
 
 .project-section{
-    background-color: rgb(231,231,231);/*go to line 125 and match the same as ok*/
+    background-color: rgb(214, 212, 212);/*go to line 125 and match the same as ok*/
     margin-top:4rem;
   }
 
@@ -575,11 +601,11 @@ a{
 
 .skill-fade-text{
   position:absolute;
-  font-size:15em;
+  font-size:10em;
   font-style:bold;
   color:rgb(231,231,231);/*line 125 aur 366 ke jaise karna hai ok*/
-  bottom:-34.5%;
-  right:-25%;
+  bottom:-27%;
+  right:-14%;
   user-select:none;
   overflow-y:hidden;
 }
@@ -632,5 +658,124 @@ a{
 
 .skill-subHeading p{
   margin:15px 0;
+}
+
+.contactus-form-container{
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+.contactus-heading{
+    font-size: 5em;
+    color: var(--bgOrange);
+    padding-top: 2rem;
+    
+}
+
+.contactus-Sub-heading{
+    font-size: 3rem;
+    color: #343d68aa;
+     text-transform: capitalize;
+}
+
+.contactus-form-container{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column ;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+}
+
+.formfield-container{
+    width: 100%;
+}
+.formfield{
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #1f1f1f;
+    font-weight: 500px;
+    border: none;
+    margin-top: 17px;
+}
+
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+#submit-btn{
+    width: 240px;
+    border:none;
+    font: 1.4rem;
+    margin: 1rem 0;
+}
+
+#submit-btn:hover{
+    scale: 0.9;
+}
+
+.submit-icon{
+    padding: 0 1rem;
+    font-size:1.5rem;
+}
+
+
+.footer{
+    position: relative;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 5rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-faded-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5em;
+    z-index: 1;
+
+}
+
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.link-wrapper div a{
+    color:white;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.link-wrapper div a:hover{
+    color:var(--bgOrange);
+    /* text-decoration: none; */
+}
+
+.icon-wrapper{
+    display: flex;
+    gap:1rem;
 }
 
