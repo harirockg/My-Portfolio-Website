@@ -99,14 +99,14 @@
                             
                         </div>
 
-                        <h2 class="project-heading">Tint & Orange</h2>
+                        <h2 class="project-heading">Study Notion</h2>
 
-                        <p class="project-subHeading">Its is a car modification company 
-                            which provide you sheets to protect your car from scratch
+                        <p class="project-subHeading">StudyNotion is an online learning platform that allows students 
+                          to access courses and instructors to create and manage educational content easily.
                         </p>
                         <div class="btn-grp">
                             <button class="btn-pink btn-project">Read More</button>
-                            <a href="">
+                            <a href="https://github.com/harirockg/Study-Notion">
                             <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                             </a>
                             <a href="">
@@ -127,13 +127,13 @@
                         <img class="project-skill" src="../Images/3d/tailwind3d.png" alt="" />
                         
                     </div>
-                    <h2 class="project-heading">Breaking Copyrights</h2>
+                    <h2 class="project-heading">Weather App</h2>
                     <p class="project-sub-heading">
-                      A platform to download copyrights free youtube music
+                      Weather App gives real-time city weather updates using OpenWeather API
                     </p>
                     <div class="btn-group">
                       <button class="btn-pink btn-project">Read More</button>
-                      <a href="">
+                      <a href="https://github.com/harirockg/Weather-App">
                         <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                       </a>
                       <a href="">
@@ -159,13 +159,13 @@
                             
                     </div>
           
-                    <h2 class="project-heading">Isha Tattva</h2>
+                    <h2 class="project-heading">Dev Detective Github</h2>
                     <p class="project-sub-heading">
-                      A Website for interior designer to showcase her works and samples
+                      A web app to fetch and display GitHub user profiles with their details and repositories.
                     </p>
                     <div class="btn-group">
                       <button class="btn-pink btn-project">Read More</button>
-                      <a href="">
+                      <a href="https://github.com/harirockg/Dev-Detective-Github">
                         <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                       </a>
                       <a href="">
@@ -190,14 +190,13 @@
                         <img class="project-skill" src="../Images/3d/tailwind3d.png" alt="" />
                             
                     </div>
-                    <h2 class="project-heading">Granit</h2>
+                    <h2 class="project-heading">ShopApp Redux</h2>
                     <p class="project-sub-heading">
-                      A architectural website to plan your building or home (Hebrew
-                      Language)
+                      An e-commerce app using Redux for products, cart, and orders.
                     </p>
                     <div class="btn-group">
                       <button class="btn-pink btn-project">Read More</button>
-                      <a href="">
+                      <a href="https://github.com/harirockg/ShopApp-Redux">
                         <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                       </a>
                       <a href="">
@@ -222,28 +221,25 @@
 
             <div class="skill-subHeading">
               <p>
-                Hi, I’m Harivansh Chauhan, an aspiring software developer 
-                passionate about creating dynamic and user-friendly web applications.
-                With a strong interest in problem-solving and emerging technologies, 
-                I continuously strive to improve my skills and stay updated with 
-                the latest trends in the tech world. My goal is to build impactful 
-                digital solutions while growing as a full-stack developer.
+                Hi, I’m Harivansh Chauhan, a passionate full-stack 
+                developer focused on creating dynamic and user-
+                friendly web applications. I enjoy solving problems,
+                 learning new technologies, and staying updated with 
+                 the latest trends in the tech world.
               </p>
               <!-- <br> -->
               <p>
-                LI specialize in both frontend and backend development, 
-                building interactive interfaces, managing server-side logic, 
-                and integrating databases to deliver seamless user experiences. 
-                I focus on writing clean, efficient, and scalable code that aligns 
-                with modern development practices.
+                I specialize in both frontend and backend development—building
+                 interactive interfaces, managing server-side logic, 
+                 and integrating databases to deliver seamless 
+                 user experiences with clean, efficient, and scalable code.
               </p>
               <!-- <br> -->
               <p>
-                Beyond coding, I enjoy exploring new tools, frameworks, 
-                and best practices that enhance performance and usability. 
-                My dedication to learning and innovation drives me to stay 
-                ahead in the ever-evolving tech landscape and work toward creating 
-                solutions that truly make a difference.
+                Beyond coding, I love exploring new tools, frameworks, 
+                and best practices that enhance performance and 
+                usability. My goal is to build impactful digital solutions 
+                and continuously grow as a developer.
               </p>
             </div>
           </div>
@@ -279,7 +275,7 @@
             <h3 class="contactus-Sub-heading">Questions, thoughts, or just want to say hello?</h3>
 
             <div class="contactus-form-container">
-              <form class="form" action="">
+              <form class="form" action="https://formspree.io/f/xrbaojzl" method="POST" id="contact-form">
                 <div class="formfield-container">
 
                   <input 
@@ -316,6 +312,35 @@
                   </button>
                 </div>
               </form>
+
+
+              <p id="form-status"></p>
+
+              <script>
+                  const form = document.getElementById("contact-form");
+                  const status = document.getElementById("form-status");
+
+                  form.addEventListener("submit", async (e) => {
+                      e.preventDefault();
+                      const data = new FormData(form);
+                      const response = await fetch(form.action, {
+                          method: form.method,
+                          body: data,
+                          headers: { 'Accept': 'application/json' }
+                      });
+                      if (response.ok) {
+                          status.innerHTML = "✅ Message sent successfully!";
+                          form.reset();
+                      } else {
+                          status.innerHTML = "❌ Oops! Something went wrong.";
+                      }
+                  });
+              </script>
+
+
+
+
+
 
             </div>
           </div>
