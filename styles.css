@@ -245,10 +245,22 @@ a{
     cursor: pointer;
     font-size: 16px;
 }
-.resume-btn{
+.resume-btn:hover{
     background-color: #45a049;
 }
 
+.github-link{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.github-link:hover{
+    background-color: #45a049;
+}
 
 .hero-section-right{
     position: relative;
